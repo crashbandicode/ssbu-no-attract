@@ -1,0 +1,29 @@
+[package]
+name = "ssbu-no-attract"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Disables the title and main menu idle demos in Super Smash Bros. Ultimate 13.0.5"
+license = "MIT"
+
+[package.metadata.skyline]
+titleid = "01006A800016E000"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+diag = []
+
+[target.'cfg(target_os = "switch")'.dependencies]
+skyline = "=0.6.0"
+
+[profile.release]
+opt-level = "s"
+debug = 2
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("switch"))'] }
