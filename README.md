@@ -9,7 +9,7 @@ No Attract keeps Super Smash Bros. Ultimate on the title screen or main menu whe
 <details>
 <summary>Inline video</summary>
 
-<video src="docs/media/no-attract.mp4" autoplay muted loop playsinline controls></video>
+<video src="/intpa/ssbu-no-attract/media/branch/main/docs/media/no-attract.mp4" autoplay muted loop playsinline controls></video>
 
 </details>
 
