@@ -2,9 +2,16 @@
 
 No Attract keeps Super Smash Bros. Ultimate on the title screen or main menu when you leave it idle.
 
-<video src="docs/media/no-attract.mp4" autoplay muted loop playsinline controls></video>
+[![Watch the stock and No Attract comparison](docs/media/no-attract-preview.jpg)](https://git.syntaxbyexample.com/intpa/ssbu-no-attract/src/branch/main/docs/media/no-attract.mp4)
 
 *Stock enters How to Play after 4:16 idle on Main. With No Attract, Main is still open at 9:10. Recorded in Eden on 2026-11-20 with the v0.1.0 NRO.* [Watch the MP4](https://git.syntaxbyexample.com/intpa/ssbu-no-attract/src/branch/main/docs/media/no-attract.mp4)
+
+<details>
+<summary>Inline video</summary>
+
+<video src="docs/media/no-attract.mp4" autoplay muted loop playsinline controls></video>
+
+</details>
 
 ## Install
 
