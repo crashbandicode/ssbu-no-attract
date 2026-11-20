@@ -1,0 +1,22 @@
+{
+  "game_id": "01006A800016E000",
+  "start": "candidate-tour",
+  "on_failure": "stop",
+  "setup": [
+    {"state": "Fresh actionable native Title, one fenced Plus on the cold startup selector", "via": "hook", "ref": "menu_timers.py:intro_to_title"},
+    {"state": "Fresh native Main, no input for both Main checkpoints", "via": "hook", "ref": "menu_timers.py:to_main"},
+    {"state": "Native Training and return", "via": "hook", "ref": "menu_timers.py:training"}
+  ],
+  "rows": [
+    {"id": "boot", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 5, "steps": [{"on": "offline", "run": "menu_timers.py:boot", "check": true}]},
+    {"id": "enter-title", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 2, "steps": [{"on": "offline", "run": "menu_timers.py:intro_to_title", "check": true}]},
+    {"id": "title-idle", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 4, "steps": [{"on": "offline", "run": "menu_timers.py:hold_candidate", "args": {"menu": "title", "cap": 220}, "check": true}]},
+    {"id": "enter-main", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 2, "steps": [{"on": "offline", "run": "menu_timers.py:to_main", "check": true}]},
+    {"id": "main-idle-1x", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 11, "steps": [{"on": "offline", "run": "menu_timers.py:hold_candidate", "args": {"menu": "main", "multiplier": 1}, "check": true}]},
+    {"id": "main-idle-2x", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 11, "steps": [{"on": "offline", "run": "menu_timers.py:hold_candidate", "args": {"menu": "main"}, "check": true}]},
+    {"id": "training-picker", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 3, "steps": [{"on": "offline", "run": "menu_timers.py:training_picker", "check": true}]},
+    {"id": "training", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 4, "steps": [{"on": "offline", "run": "menu_timers.py:training", "check": true}]},
+    {"id": "return-main", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 2, "steps": [{"on": "offline", "run": "menu_timers.py:return_from_training", "check": true}]},
+    {"id": "end", "start": "candidate-tour", "end": "candidate-tour", "budget_min": 1, "steps": [{"on": "offline", "run": "menu_timers.py:finish_trace", "check": true}]}
+  ]
+}

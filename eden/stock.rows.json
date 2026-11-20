@@ -1,0 +1,17 @@
+{
+  "game_id": "01006A800016E000",
+  "start": "stock-tour",
+  "on_failure": "stop",
+  "setup": [
+    {"state": "Fresh actionable native Title, one fenced Plus on the cold startup selector", "via": "hook", "ref": "menu_timers.py:intro_to_title"},
+    {"state": "Fresh native Main, no input after entry", "via": "hook", "ref": "menu_timers.py:to_main"}
+  ],
+  "rows": [
+    {"id": "boot", "start": "stock-tour", "end": "stock-tour", "budget_min": 5, "steps": [{"on": "offline", "run": "menu_timers.py:boot", "check": true}]},
+    {"id": "enter-title", "start": "stock-tour", "end": "stock-tour", "budget_min": 2, "steps": [{"on": "offline", "run": "menu_timers.py:intro_to_title", "check": true}]},
+    {"id": "title-idle", "start": "stock-tour", "end": "stock-tour", "budget_min": 3, "steps": [{"on": "offline", "run": "menu_timers.py:stock_idle", "args": {"menu": "title", "cap": 165}, "check": true}]},
+    {"id": "enter-main", "start": "stock-tour", "end": "stock-tour", "budget_min": 2, "steps": [{"on": "offline", "run": "menu_timers.py:to_main", "check": true}]},
+    {"id": "main-idle", "start": "stock-tour", "end": "stock-tour", "budget_min": 10, "steps": [{"on": "offline", "run": "menu_timers.py:stock_idle", "args": {"menu": "main"}, "check": true}]},
+    {"id": "end", "start": "stock-tour", "end": "stock-tour", "budget_min": 1, "steps": [{"on": "offline", "run": "menu_timers.py:finish_trace", "check": true}]}
+  ]
+}
