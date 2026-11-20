@@ -16,3 +16,7 @@ The exact candidate completed all ten rows in one XPS boot, `no-attract-candidat
 | Main | 252.972 seconds, 15,165 VI | 535.531 seconds, 32,132 VI |
 
 The timer counters crossed 720 and 14,400 on the candidate without either native expiry branch running. The same guest entered native Training, used Pause and Quit, and returned through fighter and stage select to native Main. The bridge verified scene and mode throughout. The final trace recorded zero timer expiry, How to Play, demo, unmapped accesses or file loss. Earlier partial boots are preserved separately in the companion handoff.
+
+## Publication video
+
+2026-11-20. The two 1080p30 originals were recorded in separate, matched Eden boots on the Windows Ally. Both boots were muted with the GDB stub active. The control and candidate shared the capture aids. The candidate added only the exact release NRO identified above. The control reached the visible How to Play lesson 256.133 seconds after Main appeared. The candidate stayed on Main for the 550.000 seconds shown and received no input during that interval. The publication clip uses a matching crop to remove desktop notifications and the taskbar. Its clocks show elapsed capture time. The originals and timecodes are retained with the companion evidence. The Yoga and XPS runs above supply the bridge and native trace evidence for both timers.
